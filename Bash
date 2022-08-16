@@ -1,0 +1,72 @@
+@acho off
+color f0
+echo off
+title  Start Mundo
+
+time /t
+date /t  
+
+echo       Computador: %computername%                   Usuario: %username%
+
+:menu
+echo.
+echo            ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+echo            º                      Super menu                         º                              
+echo            º                                                         º
+echo            ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹      
+echo            º                                                         º
+echo            º               Basta escolher uma opcao:                 º
+echo            º                                                         º
+echo            ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹
+echo            º ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»     º
+echo            º ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹     º
+echo            º º1:Redes conexaoºº2:Lixeira      ºº3:Mouse        º     º
+echo            º ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼     º
+echo            º ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»     º
+echo            º ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹                      º
+echo            º º4:Calculadora  ºº5:Sair         º                      º
+echo            º ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼                      º
+echo            º                                                         º
+echo            º                                                         º
+echo            º                                                         º
+echo            º                                                         º
+echo            º                                                         º
+echo            ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼ 
+
+set /p opcao=Digite a opcao.......
+if %opcao% equ 1 goto 1
+if %opcao% equ 2 goto 2
+if %opcao% equ 3 goto 3
+if %opcao% equ 4 goto 4
+if %opcao% equ 5 goto 5
+
+
+:1
+start ncpa.cpl
+cls
+goto menu
+
+
+:2
+cls
+rd /S /Q C: \$Recycle.bin
+echo --------------------------
+echo       Lixeira Limpa
+echo --------------------------
+pause
+goto menu
+
+:3
+start main.cpl
+cls
+goto menu
+
+:4
+start calc
+cls
+goto menu
+
+:5
+start exit
+cls
+goto exit
